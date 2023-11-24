@@ -42,8 +42,3 @@ logging:
 
 example.order:
   base-url: http://localhost:8080/
-
-cloud:
-  aws:
-    access-key: AKIAQYEKTVVVEK5UN6NP
-    secret-key: HSmkr6/V4R6o9l/7ZbhYwZAzBouwNaK5uu6a8Xe/
