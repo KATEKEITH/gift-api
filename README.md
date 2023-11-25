@@ -16,4 +16,5 @@
 ## 고민했던 것들
 
 패키지 구조와 클래스 네이밍에 대한 고민
+
 https://github.com/KATEKEITH/gift-api/wiki/%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B5%AC%EC%A1%B0%EC%99%80-%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%84%A4%EC%9D%B4%EB%B0%8D%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EB%AF%BC
