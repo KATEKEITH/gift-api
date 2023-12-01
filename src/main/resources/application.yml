@@ -1,41 +1,8 @@
-server:
-  port: 18080
-  shutdown: graceful
-
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: *
-#  health:
-#    diskspace:
-#      enabled: false
-
 spring:
-  lifecycle:
-    timeout-per-shutdown-phase: 20s
-  jpa:
-    show-sql: true
-#        database-platform: mysql
-    hibernate:
-      ddl-auto: none
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:13306/gift?serverTimezone=UTC&characterEncoding=UTF-8
-    username: gift-svc
-    password: gift-pass
-    hikari:
-      connection-timeout: 3000
-      validation-timeout: 3000
-      minimum-idle: 5
-      max-lifetime: 240000
-      maximum-pool-size: 20
-  flyway:
-    user: gift-svc
-    password: gift-pass
-    schemas: gift
-    url: jdbc:mysql://localhost:13306/gift?serverTimezone=UTC&characterEncoding=UTF-8
-    enabled: true
+  application:
+    name: gift
+  profiles:
+    active: local
 
 logging:
   config: classpath:logback-local.xml

@@ -1,0 +1,36 @@
+server:
+  port: 18080
+  shutdown: graceful
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USERID}
+    password: ${MYSQL_USERPW}
+    hikari:
+      connection-timeout: 3000
+      validation-timeout: 3000
+      minimum-idle: 5
+      max-lifetime: 240000
+      maximum-pool-size: 20
+  flyway:
+    user: ${MYSQL_USERID}
+    password: ${MYSQL_PW}
+    schemas: gift
+    url: ${MYSQL_URL}
+    enabled: true
+
+cloud:
+  aws:
+    access-key: ${ACCESS_KEY}
+    secret-key: ${SECRET_KEY}
